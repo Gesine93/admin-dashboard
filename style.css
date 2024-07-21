@@ -143,6 +143,7 @@ ul {
     padding-left: var(--padding-left);
     padding-top: var(--padding-top);
     padding-bottom: calc(2*var(--padding-top));
+    overflow: auto;
 }
 
 .cards {
@@ -151,8 +152,7 @@ ul {
     row-gap: 20px; 
     column-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
+    grid-template-rows: repeat(3, 1fr);}
 
 .card {
     background-color: white;
@@ -160,7 +160,7 @@ ul {
     padding: 2rem;
     border-radius: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(1fr, 250px));
     grid-template-areas: 
         "textc textc"
         "textc textc"
@@ -169,7 +169,7 @@ ul {
 
 .card-text {
     grid-area: textc;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .card-text > p {
