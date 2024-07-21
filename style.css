@@ -1,9 +1,118 @@
+.fira-sans-thin {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .fira-sans-extralight {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .fira-sans-light {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .fira-sans-regular {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .fira-sans-medium {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .fira-sans-semibold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .fira-sans-bold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .fira-sans-extrabold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .fira-sans-black {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .fira-sans-thin-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .fira-sans-extralight-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .fira-sans-light-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .fira-sans-regular-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .fira-sans-medium-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .fira-sans-semibold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .fira-sans-bold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .fira-sans-extrabold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .fira-sans-black-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
 :root {
     --color1: rgb(174, 15, 15);
     --color2: rgb(15, 63, 174);
     --color3: rgb(39, 174, 15);
-    --padding: 20px;
-    --padding2: 20px
+    --padding-top: 20px;
+    --padding-left: 20px
 }
 
 
@@ -12,6 +121,9 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     display: grid;
     grid-template-columns: 20% 30% 30% 20%;
     grid-template-rows: repeat(10, 10%);
@@ -22,7 +134,7 @@ body {
     grid-area: 1 / 2 / 3 / 5;
     background-color: var(--color1);
     grid-template-rows: repeat(2, 50%);
-    padding-top: var(--padding);
+    padding-top: var(--padding-top);
 }
 
 .search {
@@ -32,7 +144,7 @@ body {
 }
 
 .searchbar {
-    padding-left: var(--padding2);
+    padding-left: var(--padding-left);
     grid-column: 1 / 2;
 }
 
@@ -79,8 +191,8 @@ ul {
     grid-area: 1 / 1 / 11 / 2;
     background-color: var(--color2);
     align-content: start;
-    padding-top: var(--padding);
-    padding-left: var(--padding2);
+    padding-top: var(--padding-top);
+    padding-left: var(--padding-left);
     display: grid;
     row-gap: 40px;
 }
@@ -96,19 +208,27 @@ ul {
     grid-area: 3 / 2 / 11 / 5;
     background-color: var(--color3);
     grid-template-columns: 75% 25%;
+    align-items: start;
+}
+
+.right-dashboard {
+  display: grid;
+  grid-area: 1 / 2 / 2 / 3;
+  grid-template-rows: 50% 50%;
 }
 
 .projects {
     display: grid;
     grid-area: 1 / 1 / 2 / 2;
+    row-gap: 20px;
 }
 
 .cards {
     display: grid;
     row-gap: 20px;
     column-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: repeat(auto-fit, 150px);
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-auto-rows: repeat(auto-fit, 150px);
 }
 
 .card {
