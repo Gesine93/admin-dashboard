@@ -16,14 +16,22 @@ body {
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    max-width: 1600px;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 2fr 3fr 3fr 2fr;
-    grid-template-rows: repeat(10, 10%);
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 1fr 6fr;
 }
 
 .header {
     display: grid;
-    grid-area: 1 / 2 / 3 / 5;
+    grid-area: 1 / 2 / 2 / 3;
     background-color: var(--color1);
     grid-template-rows: repeat(2, 1fr);
     padding-top: var(--padding-top);
@@ -81,11 +89,12 @@ ul {
 
 .sidebar {
     overflow: auto;
-    grid-area: 1 / 1 / 11 / 2;
+    grid-area: 1 / 1 / 3 / 2;
     background-color: var(--color2);
     align-content: start;
     padding-top: var(--padding-top);
     padding-left: var(--padding-left);
+    padding-right: 5px;
     display: grid;
     row-gap: 40px;
     color: white;
@@ -122,7 +131,7 @@ ul {
 
 .dashboard {
     display: grid;
-    grid-area: 3 / 2 / 11 / 5;
+    grid-area: 2 / 2 / 3 / 3;
     background-color: var(--color3);
     grid-template-columns: 3fr 1fr;
     align-items: stretch;
@@ -152,16 +161,16 @@ ul {
     grid-row: 2 / 3;
     row-gap: 20px; 
     column-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);}
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
 
 .card {
     background-color: white;
     display: grid;
     padding: 2rem;
+    gap: 1rem;
     border-radius: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(1fr, 500px));;
-    grid-template-rows: repeat(auto-fill, minmax(1fr, 250px));
     grid-template-areas: 
         "textc textc"
         "textc textc"
@@ -170,13 +179,12 @@ ul {
 
 .card-text {
     grid-area: textc;
-    overflow: auto;
 }
 
 .card-text > p {
     grid-area: textc;
     overflow: hidden;
-    font-size: calc(var(--font-size-1)*0.8)
+    font-size: calc(var(--font-size-1)*0.8);
 }
 
 h1 {
@@ -216,3 +224,8 @@ h1 {
     }
 }
         
+@media (max-width: 1399px) {
+    :root {
+        --font-size-1: 1rem;
+    }
+}
