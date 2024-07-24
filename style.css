@@ -220,11 +220,11 @@ p {
 .ann-box {
     display: flex;
     flex-direction: column;
-    align-items: start;
     justify-content: space-around;
     background-color: var(--color1);
     padding: 1rem;
     border-radius: 0.63rem;
+    row-gap: 1rem;
 }
 
 .tren-box {
